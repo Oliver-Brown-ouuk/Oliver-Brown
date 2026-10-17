@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oliver Brown – Electronics engineer, educator and founder</title>
+<meta name="description" content="Portfolio of Oliver Brown: CEO and Co-Founder of Programming24 School, Manager at Electronics Expert Ltd UK, Diploma student in Electronics Engineering.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sky:#b7d8f5; --sky-soft:#eaf4fd; --navy:#1f2a55; --ink:#161b33;
+  --gold:#d99a14; --paper:#fbfdff; --line:rgba(31,42,85,.14); --muted:#4a5273;
+  --display:"Bricolage Grotesque","Trebuchet MS",sans-serif;
+  --body:"Figtree","Segoe UI",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{--sky:#2b4a73; --sky-soft:#131a33; --navy:#dbe8fb; --ink:#eef3fc; --gold:#f0b429; --paper:#0d1226; --line:rgba(219,232,251,.16); --muted:#a9b4d2;}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:400 1.0625rem/1.65 var(--body);color:var(--ink);background:var(--paper)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+/* nav */
+header.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font:800 1.15rem var(--display);text-decoration:none;color:var(--navy)}
+nav a{margin-left:22px;text-decoration:none;font-weight:500;color:var(--muted)}
+nav a:hover{color:var(--navy)}
+
+/* hero: graph-paper grid, echoing the tie */
+.hero{background:
+  linear-gradient(var(--line) 1px,transparent 1px) 0 0/32px 32px,
+  linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/32px 32px,
+  var(--sky-soft);
+  border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center;padding-top:72px;padding-bottom:72px}
+.hero h1{font:800 clamp(2.6rem,6vw,4.6rem)/1 var(--display);letter-spacing:-.03em;margin:0 0 18px;color:var(--navy)}
+.hero p.lead{font-size:1.25rem;max-width:34ch;margin:0 0 28px;color:var(--muted)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--navy)}
+.btn.primary{background:var(--navy);color:var(--paper)}
+.btn.primary:hover{background:var(--gold);border-color:var(--gold);color:#161b33}
+.btn.ghost:hover{background:var(--navy);color:var(--paper)}
+.portrait{justify-self:center;width:min(100%,340px);aspect-ratio:3/4;position:relative}
+.portrait img{width:100%;height:100%;object-fit:contain;display:block}
+
+/* sections */
+section{padding:72px 0;border-bottom:1px solid var(--line)}
+h2{font:700 clamp(1.8rem,3.5vw,2.4rem)/1.15 var(--display);letter-spacing:-.02em;margin:0 0 28px;color:var(--navy)}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px}
+.about p{margin:0 0 16px;max-width:62ch}
+.facts{display:grid;gap:14px;align-content:start;margin:0;padding:0;list-style:none}
+.facts li{padding:14px 18px;border-left:4px solid var(--gold);background:var(--sky-soft)}
+.facts b{display:block;font-family:var(--display);color:var(--navy)}
+
+/* timeline */
+.timeline{list-style:none;margin:0;padding:0 0 0 28px;border-left:2px solid var(--navy);display:grid;gap:36px}
+.timeline li{position:relative}
+.timeline li::before{content:"";position:absolute;left:-37px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--gold);border:3px solid var(--paper);box-shadow:0 0 0 2px var(--navy)}
+.timeline h3{font:700 1.4rem var(--display);margin:0;color:var(--navy)}
+.timeline .org{font-weight:600;color:var(--muted);margin:2px 0 8px}
+.timeline p{margin:0;max-width:62ch}
+.timeline a.org-link{text-decoration-color:var(--gold);text-decoration-thickness:2px;text-underline-offset:3px}
+
+.skills{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
+.skills li{padding:8px 16px;border-radius:999px;background:var(--sky);color:#1f2a55;font-weight:500}
+@media (prefers-color-scheme: dark){.skills li{color:#eef3fc}}
+
+.contact{background:var(--navy);color:var(--paper);border:0}
+.contact h2{color:var(--paper)}
+.contact p{max-width:52ch;margin:0 0 24px}
+.contact .btn{border-color:var(--paper);color:var(--paper)}
+.contact .btn.primary{background:var(--gold);border-color:var(--gold);color:#161b33}
+.contact .btn:hover{background:var(--paper);color:var(--navy);border-color:var(--paper)}
+footer{padding:24px 0;color:var(--muted);font-size:.95rem}
+
+@media (max-width:760px){
+  .hero .wrap,.about{grid-template-columns:1fr}
+  .hero .wrap{padding-top:40px;padding-bottom:48px;gap:28px}
+  .portrait{order:-1;width:220px}
+  nav a{margin-left:14px;font-size:.95rem}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top">Oliver Brown</a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Oliver Brown</h1>
+        <p class="lead">Electronics engineer, manager and co-founder of a school that teaches people to code.</p>
+        <div class="btns">
+          <a class="btn primary" href="#experience">See my work</a>
+          <a class="btn ghost" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="portrait">
+        <img src="Oliver_Brown.jpg" alt="Illustrated portrait of Oliver Brown: smiling, round glasses, navy blazer and a grid-patterned tie" width="880" height="1180">
+      </div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap about">
+      <div>
+        <h2>About me</h2>
+        <ul class="facts">
+          <li><b>CEO and Co-Founder</b>Programming24 School</li>
+          <li><b>Manager</b>Electronics Expert Ltd, UK</li>
+          <li><b>Diploma student</b>Electronics Engineering, Online University of UK</li>
+        </ul>
+      </div>
+      <div>
+        <p>I work where hardware meets software. By day I manage a team at an electronics company in the UK. Alongside that, I run Programming24 School, where learners build real programming skills.</p>
+        <p>I am also studying for a Diploma in Electronics Engineering, so the theory I learn goes straight into the circuits, products and lessons I work on.</p>
+        <ul class="skills" aria-label="Areas of focus">
+          <li>Electronics engineering</li>
+          <li>Team management</li>
+          <li>Programming education</li>
+          <li>Business leadership</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+      <ol class="timeline">
+        <li>
+          <h3>CEO and Co-Founder</h3>
+          <p class="org"><a class="org-link" href="https://programming24.school.blog" target="_blank" rel="noopener">Programming24 School</a></p>
+          <p>Lead the vision, curriculum and growth of a school that helps students learn to program. I set direction, build the team and keep lessons practical.</p>
+        </li>
+        <li>
+          <h3>Manager</h3>
+          <p class="org">Electronics Expert Ltd, United Kingdom</p>
+          <p>Manage people, projects and day-to-day delivery for an electronics business, keeping quality high and customers supported.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <h2>Education</h2>
+      <ol class="timeline">
+        <li>
+          <h3>Diploma in Electronics Engineering</h3>
+          <p class="org"><a class="org-link" href="https://ouuk-edu.labsland.com" target="_blank" rel="noopener">Online University of UK</a></p>
+          <p>Studying circuits, components and electronic systems, with hands-on practice through online remote laboratories.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Let’s work together</h2>
+      <p>Interested in learning to code, a partnership with Programming24 School, or an electronics project? Send me a message.</p>
+      <div class="btns">
+        <a class="btn primary" href="mailto:bbinodonjogot@gmail.com">Email Oliver</a>
+        <a class="btn" href="https://programming24.school.blog" target="_blank" rel="noopener">Visit Programming24 School</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="y">2026</span> Oliver Brown</div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
