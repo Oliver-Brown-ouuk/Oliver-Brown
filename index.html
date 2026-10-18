@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Oliver Brown – Electronics engineer, educator and founder</title>
-<meta name="description" content="Portfolio of Oliver Brown: CEO and Co-Founder of Programming24 School, Manager at Electronics Expert Ltd UK, Diploma student in Electronics Engineering.">
+<meta name="description" content="Portfolio of Oliver Brown: CEO and Co-Founder of Programming24 School, Owner of Electronics Expert Ltd UK, Diploma student in Electronics Engineering.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
@@ -64,6 +64,8 @@ h2{font:700 clamp(1.8rem,3.5vw,2.4rem)/1.15 var(--display);letter-spacing:-.02em
 .timeline li::before{content:"";position:absolute;left:-37px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--gold);border:3px solid var(--paper);box-shadow:0 0 0 2px var(--navy)}
 .timeline h3{font:700 1.4rem var(--display);margin:0;color:var(--navy)}
 .timeline .org{font-weight:600;color:var(--muted);margin:2px 0 8px}
+.timeline .year{display:inline-block;margin:0 0 6px;padding:2px 12px;border-radius:999px;background:var(--sky);color:#1f2a55;font-weight:600;font-size:.9rem}
+@media (prefers-color-scheme: dark){.timeline .year{color:#eef3fc}}
 .timeline p{margin:0;max-width:62ch}
 .timeline a.org-link{text-decoration-color:var(--gold);text-decoration-thickness:2px;text-underline-offset:3px}
 
@@ -106,7 +108,7 @@ footer{padding:24px 0;color:var(--muted);font-size:.95rem}
     <div class="wrap">
       <div>
         <h1>Oliver Brown</h1>
-        <p class="lead">Electronics engineer, manager and co-founder of a school that teaches people to code.</p>
+        <p class="lead">Electronics engineer, business owner and co-founder of a school that teaches people to code.</p>
         <div class="btns">
           <a class="btn primary" href="#experience">See my work</a>
           <a class="btn ghost" href="#contact">Get in touch</a>
@@ -124,12 +126,12 @@ footer{padding:24px 0;color:var(--muted);font-size:.95rem}
         <h2>About me</h2>
         <ul class="facts">
           <li><b>CEO and Co-Founder</b>Programming24 School</li>
-          <li><b>Manager</b>Electronics Expert Ltd, UK</li>
+          <li><b>Owner</b>Electronics Expert Ltd, UK (personal business)</li>
           <li><b>Diploma student</b>Electronics Engineering, Online University of UK</li>
         </ul>
       </div>
       <div>
-        <p>I work where hardware meets software. By day I manage a team at an electronics company in the UK. Alongside that, I run Programming24 School, where learners build real programming skills.</p>
+        <p>I work where hardware meets software. By day I run my own electronics business in the UK. Alongside that, I run Programming24 School, where learners build real programming skills.</p>
         <p>I am also studying for a Diploma in Electronics Engineering, so the theory I learn goes straight into the circuits, products and lessons I work on.</p>
         <ul class="skills" aria-label="Areas of focus">
           <li>Electronics engineering</li>
@@ -151,9 +153,9 @@ footer{padding:24px 0;color:var(--muted);font-size:.95rem}
           <p>Lead the vision, curriculum and growth of a school that helps students learn to program. I set direction, build the team and keep lessons practical.</p>
         </li>
         <li>
-          <h3>Manager</h3>
-          <p class="org">Electronics Expert Ltd, United Kingdom</p>
-          <p>Manage people, projects and day-to-day delivery for an electronics business, keeping quality high and customers supported.</p>
+          <h3>Owner</h3>
+          <p class="org">Electronics Expert Ltd, UK (personal business)</p>
+          <p>Run my own electronics business, overseeing people, projects and day-to-day delivery while keeping quality high and customers supported.</p>
         </li>
       </ol>
     </div>
@@ -164,9 +166,22 @@ footer{padding:24px 0;color:var(--muted);font-size:.95rem}
       <h2>Education</h2>
       <ol class="timeline">
         <li>
+          <span class="year">2015 – 2018</span>
           <h3>Diploma in Electronics Engineering</h3>
           <p class="org"><a class="org-link" href="https://ouuk-edu.labsland.com" target="_blank" rel="noopener">Online University of UK</a></p>
           <p>Studying circuits, components and electronic systems, with hands-on practice through online remote laboratories.</p>
+        </li>
+        <li>
+          <span class="year">2014</span>
+          <h3>A-Level</h3>
+          <p class="org"><a class="org-link" href="https://www.whtc.co.uk/" target="_blank" rel="noopener">Wembley High Technology College</a></p>
+          <p>Completed A-Level studies, building the foundation for further study in technology and engineering.</p>
+        </li>
+        <li>
+          <span class="year">2012</span>
+          <h3>O-Level</h3>
+          <p class="org"><a class="org-link" href="https://www.thomastallisschool.com/" target="_blank" rel="noopener">Thomas Tallis School</a></p>
+          <p>Completed O-Level qualifications, the first step in my academic journey.</p>
         </li>
       </ol>
     </div>
@@ -184,7 +199,7 @@ footer{padding:24px 0;color:var(--muted);font-size:.95rem}
 </main>
 
 <footer>
-  
+  <div class="wrap">© <span id="y"></span> Oliver Brown</div>
 </footer>
 <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
